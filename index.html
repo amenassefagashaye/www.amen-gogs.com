@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to AMEN-GOGS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 28px;
+            font-weight: bold;
+            color: #333;
+        }
+        .welcome {
+            font-size: 24px;
+            font-weight: bold;
+            font-style: italic;
+            color: #00509E;
+        }
+        .steps {
+            font-size: 20px;
+            margin-top: 20px;
+            color: #333;
+        }
+        .step {
+            margin: 10px 0;
+            font-weight: bold;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            color: white;
+            font-size: 18px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .youtube-button {
+            background-color: #28a745;
+        }
+        .youtube-button:hover {
+            background-color: #218838;
+        }
+        .telegram-button {
+            background-color: #0088cc;
+            pointer-events: none; /* Disable clicks */
+            opacity: 0.6; /* Make it look disabled */
+        }
+        .telegram-button.active {
+            pointer-events: auto; /* Enable clicks */
+            opacity: 1; /* Fully visible */
+        }
+        .telegram-button:hover {
+            background-color: #006699;
+        }
+        .animated-arrow {
+            display: block;
+            margin: 20px auto;
+            animation: bounce 1.5s infinite;
+            font-size: 40px;
+            color: red;
+        }
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        .container {
+            border: 3px solid red;
+            padding: 30px;
+            margin-top: 20px;
+            border-radius: 10px;
+            max-width: 800px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="welcome">
+            Welcome to AMEN-GOGS
+        </div>
+        <div class="steps">
+            <p class="step">1. Click on 
+               <a href="https://www.youtube.com/channel/UCLBivSEh30F44ptAAgEVRUA?sub_confirmation=1" 
+                  class="button youtube-button" target="_blank" onclick="enableTelegram()">AMEN YouTube Channel</a>
+            </p>
+            <div class="animated-arrow">⬇️</div>
+            <p class="step">2. Join 
+               <a href="https://t.me/GOGSmore" class="button telegram-button" id="telegramBtn" target="_blank">GOGS Telegram Channel</a>
+            </p>
+            <div class="animated-arrow">⬇️</div>
+            <p class="step">3. Follow the instructions in the Telegram Channel</p>
+        </div>
+    </div>
+
+    <script>
+        function enableTelegram() {
+            const telegramBtn = document.getElementById('telegramBtn');
+            telegramBtn.classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
